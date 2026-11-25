@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пой! Танцуй!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>
+    <div class="background-doodles" aria-hidden="true">
+        <div class="extra-doodles">
+            <i>✦</i><i>♫</i><i>✿</i><i>♪</i><i>★</i><i>✳</i><i>♫</i><i>✧</i><i>♪</i><i>✿</i><i>★</i><i>✦</i></div>
+        <span>♪</span><span>✳</span><span>♫</span><span>✦</span><span>♪</span><span>✳</span><img
+            class="background-dancer" src="media/dance-sticker.png" alt="">
+    </div>
+    <div class="site-shell">
+        <main>
+            <div class="section-heading">
+                <div><span class="section-kicker">НУ ЧТО, ГОТОВЫ?</span>
+                    <h2>ВЫБИРАЙ СВОЁ <span>↓</span></h2>
+                </div><button class="legend reset-visited" type="button"
+                    aria-label="Сбросить все отметки просмотренных номеров" title="Сбросить отметки"><span
+                        aria-hidden="true"></span> УЖЕ ВЫБИРАЛИ</button>
+            </div>
+            <section class="categories" aria-label="Выбор номера">
+                <article class="category karaoke">
+                    <div class="category-heading">
+                        <div>
+                            <div class="category-tag">ВОКАЛЬНАЯ СЦЕНА</div>
+                            <h3>ПЕСНИ<span>♪</span></h3>
+                            <p>Бери микрофон и пой от души!</p>
+                        </div>
+                        <div class="category-sticker microphone" aria-hidden="true"><svg viewBox="0 0 72 100">
+                                <rect x="22" y="6" width="28" height="49" rx="14" fill="#f8eacb" stroke="#21182a"
+                                    stroke-width="5" />
+                                <path d="M14 40v5c0 13 10 23 22 23s22-10 22-23v-5M36 68v17M23 86h26" fill="none"
+                                    stroke="#21182a" stroke-width="5" stroke-linecap="round" />
+                                <path d="M23 27h26M23 36h26" stroke="#21182a" stroke-width="3" />
+                            </svg></div>
+                    </div>
+                    <div class="grid-label"><span>ВЫБЕРИ НОМЕР</span><span data-progress="karaoke">0 / 20</span></div>
+                    <div class="number-grid" data-grid="karaoke" aria-label="Номера песен"></div>
+                </article>
+                <article class="category dance">
+                    <div class="category-heading">
+                        <div>
+                            <div class="category-tag">ТАНЦПОЛ ОТКРЫТ</div>
+                            <h3>ТАНЦЫ<span>✳</span></h3>
+                            <p>Освободи место и двигайся в бит!</p>
+                        </div>
+                        <div class="category-sticker disco" aria-hidden="true">✦<span>LET'S<br>DANCE</span></div>
+                    </div>
+                    <div class="grid-label"><span>ВЫБЕРИ НОМЕР</span><span data-progress="dance">0 / 20</span></div>
+                    <div class="number-grid" data-grid="dance" aria-label="Номера танцев"></div>
+                </article>
+            </section>
+        </main>
+
+    </div>
+    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a602638e0dd320cd',t:'MTc5NTYyNzkwNg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a602638e0dd320cd',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

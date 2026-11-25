@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ТАНЕЦ — Пой! Танцуй!</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../jss/main.js" defer></script>
+</head>
+
+<body class="player-page player-dance" data-player="dance">
+    <div class="background-doodles" aria-hidden="true">
+        <div class="extra-doodles">
+            <i>✦</i><i>♫</i><i>✿</i><i>♪</i><i>★</i><i>✳</i><i>♫</i><i>✧</i><i>♪</i><i>✿</i><i>★</i><i>✦</i></div>
+        <span>♪</span><span>✳</span><span>♫</span><span>✦</span><span>♪</span><span>✳</span><img
+            class="background-dancer" src="../media/dance-sticker.png" alt="">
+    </div>
+    <div class="site-shell player-shell">
+        <main class="player-main">
+            <div class="player-title">
+                <div>
+                    <div class="category-tag">★ ТВОЙ ВЫХОД</div>
+                    <h1>ТАНЦУЙ<span>!</span></h1>
+                    <p>Освободи место и двигайся в своём ритме!</p>
+                </div>
+                <div class="track-number"><span>ТАНЕЦ</span><strong data-track-number>—</strong></div>
+            </div>
+            <div class="video-frame"><video id="video-player" controls playsinline preload="metadata"
+                    aria-label="Видео: танец">Ваш браузер не поддерживает видео.</video>
+                <div class="video-message" id="video-message" hidden><span>✳</span><strong>Видео пока не
+                        найдено</strong>
+                    <p id="video-message-text"></p>
+                </div>
+            </div>
+            <div class="player-bottom"><a href="../index.html">ВЫБРАТЬ
+                    ДРУГОЙ НОМЕР ↗</a></div>
+        </main>
+    </div>
+    <script>(function () { function c() { var b = a.contentDocument || (a.contentWindow && a.contentWindow.document); if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a5fa90e22ff03336',t:'MTc5NTU0NTg3Ng=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5fa90e22ff03336',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
