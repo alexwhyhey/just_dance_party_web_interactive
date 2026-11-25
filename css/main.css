@@ -911,3 +911,176 @@ body:not(.player-page) .number-button {
     outline-offset: 3px;
     border-radius: 4px;
 }
+
+/* Сердечки и бегущая надпись для двух специальных песен. */
+.china-celebration {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.china-heart {
+    position: absolute;
+    top: -70px;
+    animation: heart-fall 3s ease-in forwards;
+}
+
+.china-banner {
+    position: absolute;
+    top: 21%;
+    left: 0;
+    width: max-content;
+    padding: 14px 28px;
+    border: 3px solid #241d28;
+    border-radius: 12px;
+    background: #f47eb1;
+    color: #241d28;
+    font-size: clamp(25px, 4vw, 55px);
+    font-weight: 900;
+    letter-spacing: -.03em;
+    animation: china-slide 3.5s ease-in-out forwards;
+}
+
+@keyframes heart-fall {
+    from {
+        transform: translateY(-10vh) rotate(-20deg);
+    }
+
+    to {
+        transform: translateY(115vh) rotate(140deg);
+    }
+}
+
+@keyframes china-slide {
+    0% {
+        transform: translateX(-120%);
+    }
+
+    35%,
+    65% {
+        transform: translateX(calc(50vw - 50%));
+    }
+
+    100% {
+        transform: translateX(110vw);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .china-heart {
+        display: none;
+    }
+
+    .china-banner {
+        left: 50%;
+        transform: translateX(-50%);
+        animation: none;
+    }
+}
+
+/* Большое сердце падает вместе с россыпью маленьких. */
+.china-banner {
+    top: -260px;
+    left: 50%;
+    width: clamp(180px, 22vw, 280px);
+    height: clamp(180px, 22vw, 280px);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    animation: china-heart-fall 4.2s ease-in forwards;
+}
+
+.china-banner::before {
+    content: '♥';
+    position: absolute;
+    color: #ed354d;
+    font-size: clamp(230px, 27vw, 350px);
+    line-height: 1;
+}
+
+.china-banner span {
+    position: relative;
+    z-index: 1;
+    color: #fff8e9;
+    font-size: clamp(22px, 2.7vw, 38px);
+    line-height: .95;
+    text-align: center;
+    transform: translateY(-7%);
+}
+
+@keyframes china-heart-fall {
+    from {
+        transform: translate(-50%, -5vh) rotate(-8deg);
+    }
+
+    to {
+        transform: translate(-50%, 130vh) rotate(8deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .china-banner {
+        top: 25%;
+        transform: translateX(-50%);
+        animation: none;
+    }
+}
+
+.china-heart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.china-banner {
+    font-family: Arial, 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+    font-size: clamp(20px, 2.3vw, 32px);
+    color: #fff8e9;
+    text-align: center;
+}
+
+/* Большое сердце поверх фонариков, знаков и рыбок. */
+.china-banner {
+    z-index: 2;
+    width: clamp(260px, 32vw, 420px);
+    height: clamp(260px, 32vw, 420px);
+    top: -440px;
+}
+
+.china-banner::before {
+    font-size: clamp(340px, 41vw, 540px);
+}
+
+.china-banner span {
+    max-width: 70%;
+    font-size: clamp(21px, 2.5vw, 36px);
+    white-space: nowrap;
+}
+
+@keyframes china-heart-fall {
+    from {
+        transform: translate(-50%, -5vh) rotate(-8deg);
+    }
+
+    to {
+        transform: translate(-50%, calc(100vh + 500px)) rotate(8deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .china-banner {
+        top: 25%;
+    }
+}
+
+/* Один слой для всех маленьких элементов уменьшает нагрузку на браузер. */
+.china-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
