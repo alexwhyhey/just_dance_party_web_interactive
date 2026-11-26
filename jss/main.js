@@ -52,7 +52,7 @@ function setupPlayer() {
     document.querySelector('[data-track-number]').textContent = String(n).padStart(2, '0');
     document.title = `${type === 'dance' ? 'Танец' : 'Песня'} ${n} — Пой! Танцуй!`;
     markVisited(type, n);
-    if (type === "karaoke" && (n === 17 || n === 18)) showChinaCelebration();
+    if (type === "karaoke" && (n === 5 || n === 20 | n == 8)) showChinaCelebration();
     const folder = type === 'dance' ? 'dances' : 'karaoke';
     let index = 0;
     function tryNext() {
